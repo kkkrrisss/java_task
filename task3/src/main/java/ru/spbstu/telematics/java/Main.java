@@ -7,7 +7,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Main {
     public static void main(String[] args) {
 
-        for (int i = 1; i <= 8; i++) {
+        for (int i = 1; i <= 16; i++) {
             Terminal.addPlace(new Place(i));
         }
         try (ExecutorService executorService = Executors.newFixedThreadPool(4)) {
