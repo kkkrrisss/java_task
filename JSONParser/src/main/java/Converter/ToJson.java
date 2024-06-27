@@ -3,11 +3,7 @@ package Converter;
 import java.util.*;
 
 public class ToJson {
-    /**
-     * Serializes an object to JSON string
-     * @param obj
-     * @return
-     */
+    // Serializes an object to JSON string
     @SuppressWarnings("unchecked")
     public static String toJson(Object obj) {
         if (obj == null) {
@@ -38,11 +34,7 @@ public class ToJson {
     }
 
 
-    /**
-     * Serializes an array to JSON string
-     * @param obj
-     * @return
-     */
+// Serializes an array to JSON string
     public static String arrayToJson(Object obj) {
         return listToJson(arrayToList(obj));
     }
@@ -67,11 +59,7 @@ public class ToJson {
         return sb.toString();
     }
 
-    /**
-     * Serializes a map to JSON string
-     * @param map
-     * @return
-     */
+   // Serializes a map to JSON string
     public static String mapToJson(Map<String, Object> map) {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
@@ -91,33 +79,19 @@ public class ToJson {
         return sb.toString();
     }
 
-    /**
-     * Serializes a set to JSON string
-     * @param set
-     * @return
-     * @param <T>
-     */
+
+    //Serializes a set to JSON string
     public static <T> String setToJson(Set<T> set) {
         return listToJson(set.stream().toList());
     }
 
-    /**
-     * Serializes object to JSON string
-     * @param obj
-     * @return
-     * @param <T>
-     */
+    //Serializes object to JSON string
     public static <T> String objectToJson(T obj) {
         Map<String, Object> map = objectToMap(obj);
         return mapToJson(map);
     }
 
-    /**
-     * Converts an object to map representation
-     * @param obj
-     * @return
-     * @param <T>
-     */
+    //Converts an object to map representation
     private static <T> Map<String, Object> objectToMap(T obj) {
         Map<String, Object> map = new HashMap<>();
         for (var f : obj.getClass().getDeclaredFields()) {
