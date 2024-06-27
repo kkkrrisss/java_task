@@ -4,13 +4,8 @@ import java.lang.reflect.*;
 import java.util.*;
 
 public class ToObject {
-    /**
-     * Converts a number to a specific type
-     *
-     * @param number
-     * @param type
-     * @return
-     */
+
+    // Converts a number to a specific type
     public static Object convertNumber(Number number, Class<?> type) {
         if (type == float.class || type == Float.class) {
             return number.floatValue();
@@ -29,13 +24,7 @@ public class ToObject {
         }
     }
 
-    /**
-     * Converts a map read from JSON to a specific type
-     * @param map
-     * @param type
-     * @return
-     * @param <T>
-     */
+    // Converts a map read from JSON to a specific type
     public static <T> T convertMapToObject(Map<String, Object> map, Class<T> type) {
         Set<String> fieldNames = new HashSet<>();
         for (var field : type.getDeclaredFields()) {
@@ -88,13 +77,6 @@ public class ToObject {
         return obj;
     }
 
-    /**
-     * Converts a value to a type
-     * @param value
-     * @param type
-     * @param parameterizedType
-     * @return
-     */
     @SuppressWarnings("unchecked")
     private static Object convertValue(Object value, Class<?> type, ParameterizedType parameterizedType) {
         if (value == null) {
@@ -135,13 +117,7 @@ public class ToObject {
         return convertMapToObject(map, type);
     }
 
-    /**
-     * Conversion for collection items
-     *
-     * @param value a value to convert
-     * @param parameterizedType a parametrized type of item
-     * @return
-     */
+
     private static Object convertGenericValue(Object value, ParameterizedType parameterizedType) {
         Class<?> valueClassType;
         Type valueType;
@@ -164,14 +140,6 @@ public class ToObject {
         return convertValue(value, valueClassType, parameterizedType);
     }
 
-    /**
-     * Converts a list to an array
-     *
-     * @param objects   a list to convert
-     * @param itemClass an item class
-     * @param <T>       an item type
-     * @return an array
-     */
     private static <T> T[] convertToArray(List<?> objects, Class<T> itemClass) {
         @SuppressWarnings("unchecked")
         T[] array = (T[]) Array.newInstance(itemClass, objects.size());
