@@ -65,23 +65,27 @@ The server will start running on `localhost` with the specified port (default is
 
 - POST Request
 
-![img.png](img/post.png)
+![post](https://github.com/kkkrrisss/java_task/assets/93007425/e7f4c5f9-3888-473f-9ae7-1596273179df)
+
 
 - PUT Request
 
-![img.png](img/put.png)
+![put](https://github.com/kkkrrisss/java_task/assets/93007425/b6db2fee-20c2-4978-8a58-7a3ad7c163cb)
+
 
 - PATCH Request
 
-![img.png](img/patch.png)
+![patch](https://github.com/kkkrrisss/java_task/assets/93007425/65e953be-f901-4163-a0fb-2f6d19c2e212)
+
 
 - DELETE Request
 
-![img.png](img/delete.png)
+![delete](https://github.com/kkkrrisss/java_task/assets/93007425/f644c640-167c-4832-b845-a651fc8d1f13)
 
 - Non-existent request
+- 
+![404](https://github.com/kkkrrisss/java_task/assets/93007425/7f6e706e-6ef9-436f-9801-d78c8b557d97)
 
-![img.png](img/404.png)
 
 ## Adding Custom Handlers
 
