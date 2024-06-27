@@ -60,7 +60,8 @@ The server will start running on `localhost` with the specified port (default is
 
 - GET Request
 
-![img.png](img/get.png)
+![get](https://github.com/kkkrrisss/java_task/assets/93007425/58b74ccc-fe1f-42d5-b380-e83e3e9649ba)
+
 
 - POST Request
 
