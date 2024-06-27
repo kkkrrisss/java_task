@@ -83,7 +83,7 @@ The server will start running on `localhost` with the specified port (default is
 ![delete](https://github.com/kkkrrisss/java_task/assets/93007425/f644c640-167c-4832-b845-a651fc8d1f13)
 
 - Non-existent request
-- 
+  
 ![404](https://github.com/kkkrrisss/java_task/assets/93007425/7f6e706e-6ef9-436f-9801-d78c8b557d97)
 
 
